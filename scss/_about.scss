@@ -1,0 +1,75 @@
+.about {
+    width: 80%;
+    margin: 0 auto 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &__title {
+        background-color: $light-gray;
+        text-align: center;
+        padding: 20px;
+    }
+
+    &__h1 {
+        @include fontSize(22px);
+        color: $dark-gray;
+        letter-spacing: 1px;
+        margin: 5px 0 10px 0;
+        @extend %half-margin-top, %default-margin-bottom, %no-margin-left, %no-margin-right;
+    }
+
+    .breadcrumb {
+        @include flx(justify-content, center);
+        align-items: center;
+
+        &__link {
+            @include fontSize(12px);
+            text-decoration: none;
+            color: $dark-gray;
+
+            &:hover {
+                text-decoration: underline;
+                color: $purple;
+            }
+        }
+
+        &__img {
+            @include fontSize(10px);
+            margin: 8px;
+            color: $dark-gray;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        @extend %double-margin-bottom;
+    }
+
+    &__intro {
+        font-weight: 100;
+        color: $dark-gray;
+        width: 70%;
+        text-align: center;
+        margin: 30px auto;
+        @include fontSize(16px);
+    }
+
+    &__split {
+        @include flx(justify-content, center);
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__img-description {
+        width: $img-width;
+    }
+
+    &__txt {
+        width: calc(100% - #{$img-width});
+    }
+
+    &__p {
+        @include fontSize(14px);
+        padding: 10px 20px;
+        color: $dark-gray;
+    }
+}
